@@ -1,0 +1,23 @@
+<div class="table-responsive">
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>&nbsp;</th>
+                <th>Titolo</th>
+                <th>Autore</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="item in items track by $index">
+                <td class="text-center">
+                    <button type="button" class="btn btn-danger btn-xs"
+                            data-ng-click="remove($index)">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </td>
+                <td data-ng-bind-html="item.title"></td>
+                <td data-ng-bind-html="item.author"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

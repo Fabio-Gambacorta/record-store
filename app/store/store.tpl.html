@@ -1,0 +1,21 @@
+<div class="row">
+    <section class="col-sm-4 left-col">
+        <h4>Inserisci nuovo album</h4>
+        <form role="form" id="addForm" data-ng-submit="store.addItem()">
+            <fieldset class="form-group">
+                <label for="add.title">Titolo</label>
+                <input class="form-control" name="add.title" data-ng-model="store.album.title" required />
+            </fieldset>
+            <fieldset class="form-group">
+                <label for="add.author">Autore</label>
+                <input class="form-control" name="add.author" data-ng-model="store.album.author" required />
+            </fieldset>
+            <button type="submit" class="btn btn-primary">Invia</button>
+        </form>
+        
+    </section>
+    <section class="col-sm-8">
+        <h1 class="hidden">Album list</h1>
+        <album-list items="store.items"></album-list>
+    </section>
+</div>
